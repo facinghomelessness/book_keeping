@@ -1,0 +1,12 @@
+{
+  "name": "bookkeeping",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "bookshelf": "0.8.x",
+    "bootstrap": "3.3.x",
+    "express": "4.13.x",
+    "knex": "0.8.x"
+  },
+  "repository": "https://github.com/facinghomelessness/book_keeping.git"
+}

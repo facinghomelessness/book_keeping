@@ -20,14 +20,13 @@ app.get('/people', function(req, res) {
 app.post('/people', function(req, res) {
   res.send('posted a person');
 });
-people.get('/people/:id', function(req, res) {
+app.get('/people/:id', function(req, res) {
   res.send('get a person {id=' + req.params.id + '}');
 });
 
-var server = app.listen(3000, function () {
-  var addrInfo = server.address();
-  var host = addrInfo.address;
-  var port = addrInfo.port;
+// Assets
+app.use('assets', express.static(__dirname + '/public'));
 
-  console.log('Example app listening at http://%s:%s', host, port);
+var server = app.listen(3000, function () {
+  console.log('Example app listening on port %s', 3000);
 });
