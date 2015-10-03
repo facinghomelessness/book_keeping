@@ -1,6 +1,11 @@
 var express = require('express');
 var app = express();
 
+var config = require('./config');
+var knex = require('knex')(config);
+var bookshelf = require('bookshelf')(knex);
+var models = require('./models')(bookshelf);
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
